@@ -24,42 +24,16 @@ const config = {
 };
 
 firebase.initializeApp(config);
-var provider = new firebase.auth.GoogleAuthProvider();
-//var user = firebase.auth().currentUser;
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
 
-firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-    console.log("signed in");
-    platformBrowserDynamic().bootstrapModule(AppModule)
-      .catch(err => console.error(err));
-  } else {
-    firebase.auth().signInWithRedirect(provider);
-    console.log("running");
-    firebase.auth()
-      .getRedirectResult()
-      .then((result) => {
-        if (result.credential) {
-          /** @type {firebase.auth.OAuthCredential} */
-          var credential = result.credential;
-          // ...
-        }
-        // The signed-in user info.
-        var user = result.user;
-        console.log("inner running");
-        platformBrowserDynamic().bootstrapModule(AppModule)
-          .catch(err => console.error(err));
-      }).catch((error) => {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // The email of the user's account used.
-        var email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
-        // ...
-      });
-  }
-})
+
+
+
+
+
+
+
 
 
 
