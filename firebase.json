@@ -3,7 +3,7 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "src",
+    "public": "dist/drawCanvas",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -15,5 +15,8 @@
         "destination": "/index.html"
       }
     ]
+  },
+  "remoteconfig": {
+    "template": "remoteconfig.template.json"
   }
 }
