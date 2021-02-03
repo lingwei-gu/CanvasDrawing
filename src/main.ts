@@ -5,7 +5,6 @@ import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
 import firebase from "firebase/app";
-import "firebase/auth";
 
 if (environment.production) {
   enableProdMode();
@@ -24,6 +23,7 @@ const config = {
 };
 
 firebase.initializeApp(config);
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 
