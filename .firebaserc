@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "canvasdrawing-6a528"
+  },
+  "targets": {
+    "canvasdrawing-6a528": {
+      "hosting": {
+        "drawCanvas": [
+          "canvasdrawing-6a528"
+        ]
+      }
+    }
   }
 }

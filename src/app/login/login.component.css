@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 25%;
+    padding-top: 24%;
 }
 .google-btn {
     width: 184px;
@@ -43,6 +43,10 @@
 }
 .google-btn:active {
     background: #1669F2;
+}
+.text-wraper {
+    text-align: center;
+    justify-content: center;
 }
 
 
