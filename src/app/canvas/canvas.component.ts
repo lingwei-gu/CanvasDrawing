@@ -33,7 +33,6 @@ export class CanvasComponent implements OnInit {
     });
 
     this.retrieveCanvas();
-
     // save for mouse:up because a drawing is done only when the mouse is up
     this.canvas.on('mouse:up', () => {
       console.log('mouse up');
@@ -61,6 +60,7 @@ export class CanvasComponent implements OnInit {
   changeColor(value: string): void {
     var brush = this.canvas.freeDrawingBrush;
     brush.color = value;
+    console.log("color changed");
   }
 
   // add image to the canvas
@@ -87,7 +87,7 @@ export class CanvasComponent implements OnInit {
         canvasImage.scaleToWidth(500);
         this.canvas.add(canvasImage);
         this.db.object('users/' + localStorage.getItem('user')).update({canvas : JSON.stringify(this.canvas)});
-        console.log(JSON.stringify(this.canvas))
+        console.log("db update image");
       };
 
       // load the image file
