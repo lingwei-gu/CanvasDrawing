@@ -17,6 +17,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent}
 ];
 
+// this is for this specific project, so the confidentials are not further encrypted
 const config = {
   apiKey: "AIzaSyBRsqkrHPe52LD9lbd6pgobwCE64WwzmFI",
   authDomain: "canvasdrawing-6a528.firebaseapp.com",
