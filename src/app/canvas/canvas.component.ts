@@ -13,8 +13,18 @@ import { Observable } from 'rxjs';
 export class CanvasComponent implements OnInit {
   private canvas: fabric.Canvas;
   public toggleText: string;
+  public CANVAS_WIDTH: number;
+  public CANVAS_HEIGHT: number;
+  public IMAGE_SCALE_WIDTH: number;
+  public IMAGE_SCALE_HEIGHT: number;
+
   constructor(private router: Router, private db: AngularFireDatabase) {
     // check login status
+    this.CANVAS_WIDTH = 1600;
+    this.CANVAS_HEIGHT = 1000;
+    this.IMAGE_SCALE_WIDTH = 500;
+    this.IMAGE_SCALE_HEIGHT = 500;
+
     if (localStorage.getItem('user') === null) this.redirectToLogin();
     console.log('ctor' + localStorage.getItem('user'));
     this.toggleText = "Turn off Drawing Mode to Edit Image";
@@ -24,11 +34,11 @@ export class CanvasComponent implements OnInit {
     const userInfo: Observable<any> = this.db.object('users').valueChanges();
     userInfo.subscribe((user) => {
       console.log(user['userID']);
-    })
+    });
 
     this.canvas = new fabric.Canvas('myCanvas', {
-      width: 1600,
-      height: 1000,
+      width: this.CANVAS_WIDTH,
+      height: this.CANVAS_HEIGHT,
       isDrawingMode: true
     });
 
@@ -38,7 +48,6 @@ export class CanvasComponent implements OnInit {
       console.log('mouse up');
       this.db.object('users/' + localStorage.getItem('user')).update({canvas : JSON.stringify(this.canvas)});
     });
-    
   }
 
   // retrieve canvas from database
@@ -83,8 +92,8 @@ export class CanvasComponent implements OnInit {
       image.onload = () => {
         var canvasImage = new fabric.Image(image, {
         });
-        canvasImage.scaleToHeight(500);
-        canvasImage.scaleToWidth(500);
+        canvasImage.scaleToHeight(this.IMAGE_SCALE_HEIGHT);
+        canvasImage.scaleToWidth(this.IMAGE_SCALE_WIDTH);
         this.canvas.add(canvasImage);
         this.db.object('users/' + localStorage.getItem('user')).update({canvas : JSON.stringify(this.canvas)});
         console.log("db update image");

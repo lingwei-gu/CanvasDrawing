@@ -1,0 +1,55 @@
+[debug] [2021-02-05T03:23:30.832Z] ----------------------------------------------------------------------
+[debug] [2021-02-05T03:23:30.833Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2021-02-05T03:23:30.833Z] CLI Version:   9.2.2
+[debug] [2021-02-05T03:23:30.834Z] Platform:      darwin
+[debug] [2021-02-05T03:23:30.834Z] Node Version:  v12.16.1
+[debug] [2021-02-05T03:23:30.834Z] Time:          Thu Feb 04 2021 22:23:30 GMT-0500 (Eastern Standard Time)
+[debug] [2021-02-05T03:23:30.834Z] ----------------------------------------------------------------------
+[debug] [2021-02-05T03:23:30.834Z] 
+[debug] [2021-02-05T03:23:30.844Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-02-05T03:23:30.844Z] > authorizing via signed-in user
+[debug] [2021-02-05T03:23:30.844Z] [iam] checking project canvasdrawing-6a528 for permissions ["cloudconfig.configs.get","cloudconfig.configs.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2021-02-05T03:23:30.847Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-02-05T03:23:30.847Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-02-05T03:23:31.141Z] <<< HTTP RESPONSE 200 {"date":"Fri, 05 Feb 2021 03:23:31 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-05T03:23:31.168Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/canvasdrawing-6a528:testIamPermissions  
+ {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2021-02-05T03:23:31.446Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 05 Feb 2021 03:23:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=162","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-05T03:23:31.448Z] > refreshing access token with scopes: []
+[debug] [2021-02-05T03:23:31.448Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-02-05T03:23:31.535Z] <<< HTTP RESPONSE 200 {"date":"Fri, 05 Feb 2021 03:23:31 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-05T03:23:31.562Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/canvasdrawing-6a528 [none]
+[debug] [2021-02-05T03:23:31.781Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/canvasdrawing-6a528 200
+[debug] [2021-02-05T03:23:31.781Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/canvasdrawing-6a528 {"projectId":"canvasdrawing-6a528","projectNumber":"53124351350","displayName":"CanvasDrawing","name":"projects/canvasdrawing-6a528","resources":{"hostingSite":"canvasdrawing-6a528","realtimeDatabaseInstance":"canvasdrawing-6a528-default-rtdb"},"state":"ACTIVE"}
+[debug] [2021-02-05T03:23:31.782Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/canvasdrawing-6a528 [none]
+[debug] [2021-02-05T03:23:32.083Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/canvasdrawing-6a528 200
+[debug] [2021-02-05T03:23:32.083Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/canvasdrawing-6a528 {"projectId":"canvasdrawing-6a528","projectNumber":"53124351350","displayName":"CanvasDrawing","name":"projects/canvasdrawing-6a528","resources":{"hostingSite":"canvasdrawing-6a528","realtimeDatabaseInstance":"canvasdrawing-6a528-default-rtdb"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'canvasdrawing-6a528'...
+[info] 
+[info] i  deploying database, hosting, remoteconfig 
+[info] i  database: checking rules syntax... 
+[debug] [2021-02-05T03:23:32.088Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-02-05T03:23:32.088Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-02-05T03:23:32.189Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Fri, 05 Feb 2021 03:23:32 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-05T03:23:32.217Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/canvasdrawing-6a528/locations/-/instances/canvasdrawing-6a528-default-rtdb  
+ 
+[debug] [2021-02-05T03:23:32.475Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 05 Feb 2021 03:23:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-05T03:23:32.478Z] >>> HTTP REQUEST PUT https://canvasdrawing-6a528-default-rtdb.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+[debug] [2021-02-05T03:23:32.773Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Fri, 05 Feb 2021 03:23:32 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] ✔  database: rules syntax for database canvasdrawing-6a528-default-rtdb is valid 
+[debug] [2021-02-05T03:23:32.775Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/canvasdrawing-6a528/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-02-05T03:23:33.256Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 05 Feb 2021 03:23:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-05T03:23:33.257Z] > refreshing access token with scopes: []
+[debug] [2021-02-05T03:23:33.257Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
